@@ -171,7 +171,7 @@ DEPENDENCIES
   debug
   pg (~> 1.1)
   puma (~> 5.0)
-  rack-cors
+  rack-cors (= 2.0.1)
   rails (~> 7.0.8)
   tzinfo-data
 
