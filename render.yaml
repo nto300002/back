@@ -9,7 +9,7 @@ services:
     name: catharsis
     env: docker
     region: singapore
-    branch: main
+    branch: develop
     plan: free
     dockerfilePath: ./docker/deploy/staging/Dockerfile
     envVars:
