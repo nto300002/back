@@ -1,0 +1,20 @@
+databases:
+  - name: catharsis_db
+    databaseName: catharsis_pg_db
+    user: c_user38912a
+    region: singapore
+    plan: starter
+services:
+  - type: web
+    name: catharsis
+    env: docker
+    region: singapore
+    branch: develop
+    plan: free
+    dockerfilePath: ./docker/deploy/staging/Dockerfile
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: catharsis_db
+          property: connectionString
+      - key: CORS_ORIGINS # フロントエンドバックエンドでオリジンが異なる場合は設定する
