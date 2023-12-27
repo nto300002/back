@@ -12,6 +12,8 @@ services:
     branch: develop
     plan: free
     dockerfilePath: ./docker/deploy/staging/Dockerfile
+    domains: # 独自ドメインを使う場合は設定する
+      - catharsis-app.com
     envVars:
       - key: DATABASE_URL
         fromDatabase:
