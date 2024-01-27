@@ -7,7 +7,7 @@
 
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    origins 'localhost:8000', '127.0.0.1:8000', 'https://www.catharsis-app.com'
+    origins 'http://localhost:8000/', 'http://127.0.0.1:8000/', 'https://www.catharsis-app.com', 'https://catharsis-front-git-develop-nto300002.vercel.app'
 
     resource "*",
       headers: :any,
